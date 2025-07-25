@@ -91,7 +91,7 @@ const cropData = [
       { name: "Bacterial Leaf Blight", sym: "Water-soaked streaks that turn yellow/brown and spread along veins.", manage: "Clean seed; avoid standing water; copper treatments where recommended." }
     ],
     resources: [
-      { label: "DOA Rice Extension Guide (PDF)", url: "#" },
+      { label: "DOA Rice Extension Guide (PDF)", url: "chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://doa.gov.lk/wp-content/uploads/2020/05/Rice-Congress-2010.pdf" },
       { label: "IRRI Disease ID Tool", url: "https://www.irri.org" }
     ]
   },
@@ -106,7 +106,7 @@ const cropData = [
       { name: "Red Spider Mite (Pest)", sym: "Speckled leaves; webbing; defoliation under drought stress.", manage: "Miticide rotations; shade & moisture management." }
     ],
     resources: [
-      { label: "TRI Advisory Notes", url: "#" }
+      { label: "TRI Advisory Notes", url: "https://www.tri.lk/view-all-publications/" }
     ]
   },
   {
@@ -120,7 +120,7 @@ const cropData = [
       { name: "Coconut Mite", sym: "Lesions on nuts; distorted fruit; yield loss.", manage: "Biocontrol agents; post-harvest nut treatment." }
     ],
     resources: [
-      { label: "Coconut Research Institute", url: "#" }
+      { label: "Coconut Research Institute", url: "https://cri.gov.lk/" }
     ]
   },
   {
@@ -134,7 +134,7 @@ const cropData = [
       { name: "Twister (Anthracnose)", sym: "Curling, yellowing leaves; bulb decay in moist conditions.", manage: "Use clean seed; good drainage; chemical control; remove infected plants." }
     ],
     resources: [
-      { label: "Onion Cultivation Guide", url: "#" }
+      { label: "Onion Cultivation Guide", url: "chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://www.jica.go.jp/Resource/project/english/kenya/015/materials/c8h0vm0000f7o8cj-att/materials_20.pdf" }
     ]
 },
 {
@@ -148,7 +148,7 @@ const cropData = [
       { name: "Collar Rot", sym: "Stem base rots; plant collapse.", manage: "Soil drenching with fungicides; avoid continuous cropping." }
     ],
     resources: [
-      { label: "Chili Farming Manual", url: "#" }
+      { label: "Chili Farming Manual", url: "chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://www.jica.go.jp/Resource/project/english/kenya/015/materials/c8h0vm0000f7o8cj-att/materials_08.pdf" }
     ]
 },
 {
@@ -164,7 +164,7 @@ const cropData = [
       { name: "Bud Necrosis", sym: "Terminal bud dies; leaf mottling; stunted plants.", manage: "Control vectors; avoid late planting." }
     ],
     resources: [
-      { label: "Groundnut Crop Handbook", url: "#" }
+      { label: "Groundnut Crop Handbook", url: "chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://openknowledge.fao.org/server/api/core/bitstreams/a825f44a-0409-466a-94b4-135e4bc9fd27/content" }
     ]
 },
 {
@@ -178,7 +178,7 @@ const cropData = [
       { name: "Collar Rot", sym: "Rot at soil line; seedling death.", manage: "Soil drenching; avoid monoculture." }
     ],
     resources: [
-      { label: "Cowpea Production Guide", url: "#" }
+      { label: "Cowpea Production Guide", url: "chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://www.jica.go.jp/Resource/project/english/kenya/015/materials/c8h0vm0000f7o8cj-att/materials_23.pdf" }
     ]
 },
 {
@@ -192,7 +192,7 @@ const cropData = [
       { name: "Collar Rot", sym: "Base stem rot; seedling wilt.", manage: "Soil drench; crop rotation." }
     ],
     resources: [
-      { label: "Blackgram Farmer Sheet", url: "#" }
+      { label: "Blackgram Farmer Sheet", url: "chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://www.aciar.gov.au/sites/default/files/legacy/green_gram_and_black_gram_final.pdf" }
     ]
 }
 ];
