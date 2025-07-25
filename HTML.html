@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>AgriShield | Crop Loss Map & Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ArcGIS API -->
+  <link rel="stylesheet" href="https://js.arcgis.com/4.29/esri/themes/light/main.css">
+  <script src="https://js.arcgis.com/4.29/"></script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="CSS.css">
+</head>
+<body>
+  <div class="container">
+    <div id="viewDiv" aria-label="Crop Loss Map"></div>
+
+    <aside id="sidebar" class="sidebar sidebar--collapsed" aria-label="AgriShield Dashboard">
+      <div id="homePanel" class="panel panel--active" role="region" aria-labelledby="homePanelTitle">
+        <h1 id="homePanelTitle">🌾 AgriShield 🛡️</h1>
+        <p>Resilience & Recovery through Crop Loss Transparency</p>
+        <button class="agri-btn" onclick="location.href='formtry.html'">📬 Report Now</button>
+        <button class="agri-btn" id="btnAnalyticsPanel" type="button">📊 View Analytics Dashboard</button>
+        <button class="agri-btn" id="btnCropPanel" type="button">🌱 View Crop Details & Diseases</button>
+		
+		<button class="agri-btn" id="btnFindNearestStorage">📍 Find Nearest Storage</button>
+
+		<div id="nearestStoragePanel" style="display: none; margin-top: 20px;">
+		  <h3>📌 Nearest Storage Result</h3>
+		  <p id="storageInstruction">Click on a crop loss incident to find the nearest working storage.</p>
+		  <div id="nearestStorageDetails" style="margin-top: 10px;"></div>
+		  <button class="agri-btn" id="btnClearRoute" style="display: none; margin-top: 10px;">🗑️ Clear Selection</button>
+		  <button class="agri-btn" id="btnExitNearestMode" style="display: none; margin-top: 5px;">❌ Exit Mode</button>
+		</div>
+
+		<!-- Enhanced Layer Controls with Color Indicators -->
+		<h3 style="margin-top: 20px; color: #5D4037; border-bottom: 2px solid #D2691E; padding-bottom: 5px;">🗂️ Layer Controls</h3>
+		<div id="layerControls">
+		  <label>
+		    <input type="checkbox" id="toggleAllIncidents" checked> 
+		    All Incidents
+		    <span class="layer-color-indicator color-all-incidents"></span>
+		  </label>
+		  <label>
+		    <input type="checkbox" id="togglePaddy"> 
+		    Paddy (Rice)
+		    <span class="layer-color-indicator color-paddy"></span>
+		  </label>
+		  <label>
+		    <input type="checkbox" id="toggleMaize"> 
+		    Maize (Corn)
+		    <span class="layer-color-indicator color-maize"></span>
+		  </label>
+		  <label>
+		    <input type="checkbox" id="toggleVegetables"> 
+		    Vegetables
+		    <span class="layer-color-indicator color-vegetables"></span>
+		  </label>
+		  <label>
+		    <input type="checkbox" id="toggleFruits"> 
+		    Fruits
+		    <span class="layer-color-indicator color-fruits"></span>
+		  </label>
+		  <label>
+		    <input type="checkbox" id="toggleOther"> 
+		    Other Crops
+		    <span class="layer-color-indicator color-other"></span>
+		  </label>
+		  <label>
+		    <input type="checkbox" id="toggleStorage" checked> 
+		    Storage Facilities
+		    <span class="layer-color-indicator color-storage"></span>
+		  </label>
+		</div>
+      </div>
+
+      <div id="analyticsPanel" class="panel" role="region" aria-labelledby="analyticsPanelTitle">
+        <button class="agri-btn back-btn" type="button" id="backToHomeFromAnalyticsBtn">⬅ Back</button>
+        <h1 id="analyticsPanelTitle">📊 Analytics Dashboard</h1>
+        <p>Explore key stats and summaries of reported crop losses.</p>
+        <div id="analyticsGrid" class="crop-grid" role="list">
+        <!-- Boxes will be rendered dynamically -->
+        </div>
+        
+        <!-- Crop Breakdown Panel -->
+        <div id="cropBreakdownPanel" style="display: none;">
+          <div class="crop-breakdown">
+            <h3>🌾 Crop-wise Incident Breakdown</h3>
+            <div id="cropBreakdownContent">
+              <!-- Crop breakdown will be populated here -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Problem Breakdown Panel -->
+        <div id="problemBreakdownPanel" style="display: none;">
+          <div class="problem-breakdown">
+            <h3>⚠️ Problem-wise Report Breakdown</h3>
+            <div id="problemBreakdownContent">
+              <!-- Problem breakdown will be populated here -->
+            </div>
+          </div>
+        </div>
+        
+      </div>
+
+      <div id="cropPanel" class="panel" role="region" aria-labelledby="cropPanelTitle">
+        <button class="agri-btn back-btn" type="button" id="backToHomeBtn">⬅ Back</button>
+        <h1 id="cropPanelTitle">🌱 Crop Details</h1>
+        <p>Select a crop to view common diseases, symptoms, and management tips.</p>
+        <div id="cropGrid" class="crop-grid" role="list"></div>
+      </div>
+
+      <div id="cropDetailPanel" class="panel" role="region" aria-labelledby="cropDetailTitle">
+        <button class="agri-btn back-btn" type="button" id="backToCropListBtn">⬅ Back to Crop List</button>
+        <div id="cropDetailContent" class="crop-detail"></div>
+      </div>
+
+      <footer class="sidebar-footer">
+        <p>&copy; 2025 AgriShield™</p>
+        <p class="subtitle">- Built for Agriculture Resilience -</p>
+      </footer>
+    </aside>
+  </div>
+
+  <!-- Custom JavaScript -->
+  <script src="javascript.js"></script>
+</body>
+</html>
