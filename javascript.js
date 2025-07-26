@@ -837,7 +837,7 @@ require([
   map.add(cropLossReportsLayer);
 
   // Storage Facilities GeoJSONLayer
-  const storageFacilitiesUrl = "https://raw.githubusercontent.com/raviban02/Storage/main/Storages.geojson";
+  const storageFacilitiesUrl = "https://raw.githubusercontent.com/raviban02/Storage-all/main/storage.geojson";
 
   storageFacilitiesLayer = new GeoJSONLayer({
     url: storageFacilitiesUrl,
